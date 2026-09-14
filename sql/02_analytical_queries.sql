@@ -164,3 +164,13 @@ JOIN dim_department dp ON dr.department_id=dp.department_id
 LEFT JOIN fact_encounter e ON dr.doctor_id=e.doctor_id
 GROUP BY dr.doctor_name, dp.department_name
 ORDER BY workload DESC;
+
+
+-- 37. Patient-level report with patient names
+SELECT p.patient_id, p.patient_name, COUNT(e.encounter_id) AS total_encounters, ROUND(SUM(e.encounter_cost),2) AS total_encounter_cost FROM dim_patient p LEFT JOIN fact_encounter e ON p.patient_id=e.patient_id GROUP BY p.patient_id,p.patient_name ORDER BY total_encounter_cost DESC;
+
+-- 38. Top patients by encounter cost with readable names
+SELECT p.patient_id,p.patient_name,ROUND(SUM(e.encounter_cost),2) AS total_cost FROM dim_patient p JOIN fact_encounter e ON p.patient_id=e.patient_id GROUP BY p.patient_id,p.patient_name ORDER BY total_cost DESC FETCH FIRST 10 ROWS ONLY;
+
+-- 39. Patient name with latest encounter
+WITH x AS (SELECT e.*,ROW_NUMBER() OVER(PARTITION BY e.patient_id ORDER BY e.encounter_date DESC) rn FROM fact_encounter e) SELECT p.patient_id,p.patient_name,x.encounter_id,x.encounter_date,x.encounter_cost,x.status FROM x JOIN dim_patient p ON x.patient_id=p.patient_id WHERE x.rn=1;

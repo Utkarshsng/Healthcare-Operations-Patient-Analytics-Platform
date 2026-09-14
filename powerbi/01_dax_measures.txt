@@ -14,3 +14,7 @@ Readmission Encounters = CALCULATE([Total Encounters], Fact_Encounter[readmissio
 Readmission Rate % = DIVIDE([Readmission Encounters], [Total Encounters])
 High Cost Encounters = CALCULATE([Total Encounters], Fact_Encounter[high_cost_flag] = "High")
 High Cost Rate % = DIVIDE([High Cost Encounters], [Total Encounters])
+
+Patient Encounter Count = DISTINCTCOUNT(Fact_Encounter[encounter_id])
+Patient Total Cost = SUM(Fact_Encounter[encounter_cost])
+Patient Average Wait = AVERAGE(Fact_Encounter[wait_minutes])

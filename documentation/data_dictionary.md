@@ -14,3 +14,6 @@ treatment_id, encounter_id, patient_id, treatment_type, quantity, unit_cost, tre
 
 ## Appointments
 appointment_id, patient_id, doctor_id, department_id, appointment_date, appointment_type, status
+
+
+`patient_id` is the primary analytical key. `patient_name` is used for readable patient-level reporting, Excel XLOOKUP practice, SQL JOIN output, and Power BI patient detail/drill-through views.

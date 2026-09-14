@@ -25,3 +25,7 @@ All data is synthetic and anonymized. It contains no real patient information. O
 2. Patient & Encounter Intelligence
 3. Appointment & Department Operations
 4. Cost, Readmission & Priority Analysis
+
+
+## Patient-level reporting
+`patient_id` is the analytical key, while `patient_name` is used for readable reporting in Excel, SQL and the Power BI patient detail table.
