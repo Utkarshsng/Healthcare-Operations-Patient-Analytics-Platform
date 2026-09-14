@@ -1,0 +1,6 @@
+treatment_id,encounter_id,patient_id,treatment_type,quantity,unit_cost,treatment_cost
+T00008,E05252,P01940,Diagnostic Test,1,-100.0,1290.31
+T02981,E00036,P01804,Diagnostic Test,2,1014.47,2028.94
+T03092,E00006,P01033,Therapy,1,555.73,555.73
+T03792,E00006,P01033,Medication,2,1282.9,2565.8
+T06276,E00006,P01033,Procedure,2,575.17,1150.34

@@ -1,0 +1,12 @@
+# KPI Dictionary
+- Total Patients: distinct patients
+- Total Encounters: distinct encounter IDs
+- Completed Encounters: encounters with status Completed
+- Average Wait Minutes: average wait time
+- Average LOS: average inpatient length of stay
+- Total Encounter Cost: sum of encounter cost
+- Average Cost per Encounter: total encounter cost / encounters
+- No Show Rate: no-show appointments / total appointments
+- Cancellation Rate: cancelled appointments / total appointments
+- Readmission Rate: readmission encounters / encounters
+- High Cost Rate: high-cost encounters / encounters

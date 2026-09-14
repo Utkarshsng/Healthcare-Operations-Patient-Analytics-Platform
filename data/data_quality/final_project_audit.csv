@@ -1,0 +1,8 @@
+metric,value
+Patients,2000
+Doctors,30
+Departments,8
+Encounters clean,7997
+Treatments clean,11995
+Appointments clean,14999
+QA failures,0

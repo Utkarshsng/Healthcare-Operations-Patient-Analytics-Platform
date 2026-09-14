@@ -1,0 +1,4 @@
+encounter_id,patient_id,doctor_id,department_id,encounter_date,patient_type,status,wait_minutes,length_of_stay_days,encounter_cost
+E00006,P01033,DR023,D007,2025-02-01,Inpatient,Completed,-10,7,5969.95
+E00016,P00874,DR006,D006,2023-06-15,OPD,Completed,36,0,-500.0
+E00036,P01804,DR009,D999,2025-12-23,OPD,Completed,35,0,1788.44

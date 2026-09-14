@@ -1,0 +1,5 @@
+dataset,raw_rows,clean_rows,removed_rows
+patients_raw,2002,2000,2
+encounters_raw,8003,7997,6
+treatments_raw,12002,11995,7
+appointments_raw,15002,14999,3
